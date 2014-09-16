@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+  #main
+    h2(style="font-size:2em !important;letter-spacing:8px;").text-center
+      a(href="/") Embark
+    br
+    form#form(action="/register", method="post").pure-form.pure-form-aligned
+      legend Create an account
+      fieldset
+        .pure-control-group
+          label(for="email") Email
+          input(type="email", name="username", placeholder="Email", autofocus="autofocus")
+        .pure-control-group
+          label(for="password") Password
+          input(type="password", name="password", placeholder="Password")
+        .pure-controls
+          button(type="submit")#button.ladda-button.blue.slide-up
+            span.label Register
+            span.spinner
+          br
+          br
+          a.btn(href="/log-in") or Log In
+  script.
+    var btn = document.getElementById('button'),
+      frm = document.getElementById('form');
+    frm.addEventListener('submit', function(evt){
+      btn.setAttribute( 'data-loading', '' );
+    }, false);

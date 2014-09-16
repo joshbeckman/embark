@@ -1,0 +1,41 @@
+{
+  "name": "embark",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Joshua Beckman <@jbckmn>",
+  "main": "./app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jbckmn/embark.git"
+  },
+  "engine": [
+    "node >=0.10.0"
+  ],
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "async": "*",
+    "bcrypt": "*",
+    "connect-flash": "*",
+    "express": "*",
+    "grunt": "~0.4.1",
+    "grunt-cli": "*",
+    "jade": "*",
+    "mongoose": "~3.6.11",
+    "mongoose-troop": "0.0.2",
+    "mongoose-createdmodified": "0.0.2",
+    "newrelic": "~1.0.0",
+    "passport": "*",
+    "passport-local": "*",
+    "passport-local-mongoose": "*",
+    "postmark": "^0.2.5",
+    "request": "~2.16.6",
+    "socket.io": "*"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-cssmin": "*"
+  }
+}
