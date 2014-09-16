@@ -12,31 +12,7 @@ block content
         .pure-control-group
           label(for="email") Email
           input(type="email", name="email", placeholder="", required, value="#{user.email}")
-        .pure-control-group
-          label(for="image") Your Podcast Image
-          img(src="#{image_url}", style="max-height:60px;vertical-align:middle;")
         .pure-controls
           button#readButton.ladda-button.blue.slide-up
             span.label Update
             span.spinner
-    #help
-      br
-      h4#marklet Your Personal Nareta Bookmarklet
-      p This is a bookmarklet: a little app that runs in your browser and lets you send any article on the web back to Nareta for reading.
-      p 
-        small Drag-and-drop the following link to your bookmarks bar or right click it and add it to your favorites for a posting shortcut.
-      h4.text-center
-        a(href="javascript:(function(i,s,o,g,r,a,m){m=s+[g+o,r+encodeURIComponent(window.location.href)].join('&');window[a]=window.open(m,a);})('script','http://nareta.co/aa?','#{codedKey}','key=','url=','nareta');") 
-          img(src="/images/favicon.png", style="max-height:12px;margin-right:8px;")
-          | Nareta Bookmarklet
-      hr
-      h4 Your Podcast URL
-      p 
-        small Copy and paste into your podcast player
-        br
-        small &nbsp;&nbsp;&mdash;&nbsp;
-          a(href="/podcast/#{user._id}") http://nareta.co/podcast/#{user._id}
-      hr
-      h4 Contact
-      p &nbsp;&nbsp;&mdash;&nbsp;
-        a(href="mailto:support@nareta.co") support@nareta.co
